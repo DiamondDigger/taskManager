@@ -1,0 +1,50 @@
+#taskData div {
+  width: 100%;
+  margin: auto;
+}
+
+#taskData table {
+  table-layout: auto;
+  width: 100%;
+}
+
+#taskData tr {
+  background-color: lavender;
+}
+
+#taskData td {
+  padding: 20px;
+  max-width: 300px;
+  overflow-wrap: break-word;
+}
+
+#taskData .button-edit {
+  background-color: #20dfcc;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 12px 16px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#taskData .button-edit:hover {
+  background-color: #0080ff;
+}
+
+#taskData .button-delete {
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 12px 16px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#taskData .button-delete:hover {
+  background-color: #ff0000;
+}
+/*# sourceMappingURL=tableStyles.css.map */

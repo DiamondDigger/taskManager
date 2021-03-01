@@ -1,0 +1,46 @@
+$edit: lightgreen;
+$delete: red;
+
+@mixin buttonStyle($color1, $color2) {
+  background-color: $color1;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 12px 16px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color2;
+  }
+}
+
+#taskData {
+  div {
+    width: 100%;
+    margin: auto;
+  }
+  table {
+    table-layout: auto;
+    width: 100%;
+  }
+
+  tr {
+    background-color: lavender;
+  }
+
+  td {
+    padding: 20px;
+    max-width: 300px;
+    overflow-wrap: break-word;
+  }
+
+  .button-edit {
+    @include buttonStyle(#20dfcc, #0080ff);
+  }
+
+  .button-delete {
+    @include buttonStyle(#ffb6c1, #ff0000);
+  }
+}
