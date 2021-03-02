@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/ListOfTasks/tableStyles.css";
-import { RiDeleteBin2Fill } from "react-icons/ri";
+import { AiOutlineFileDone } from "react-icons/ai";
 import { FiEdit } from "react-icons/fi";
+import { RiDeleteBin2Fill } from "react-icons/ri";
 
 const TableData = ({ data }) => {
   return (
@@ -10,7 +11,12 @@ const TableData = ({ data }) => {
       return (
         <tr id="row" key={index}>
           <td>
-            <input type="checkbox" id="button" />
+            <button
+              className="button-done"
+              onClick={() => console.log("completed button")}
+            >
+              <AiOutlineFileDone />
+            </button>
           </td>
           <td>{id}</td>
           <td>{username}</td>
