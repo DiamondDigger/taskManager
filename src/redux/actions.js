@@ -3,14 +3,16 @@ import {
   EDIT_TASK,
   DELETE_TASK,
   TOGGLE_DONE_TASK,
+  FILTER_BY_EMAIL,
+  FILTER_BY_NAME,
+  FILTER_BY_STATUS,
+  SORT_IN_ASCENDING_DIRECTION,
+  SORT_IN_DESCENDING_DIRECTION,
 } from "./actionTypes";
-
-let generateId = 0;
 
 export const addTask = (username, email, text) => ({
   type: ADD_TASK,
   payload: {
-    id: ++generateId,
     username,
     email,
     text,
@@ -33,4 +35,24 @@ export const editTask = (id, content) => ({
     id,
     content,
   },
+});
+
+export const filterByName = () => ({
+  type: FILTER_BY_NAME,
+});
+
+export const filterByEmail = () => ({
+  type: FILTER_BY_EMAIL,
+});
+
+export const filterByStatus = () => ({
+  type: FILTER_BY_STATUS,
+});
+
+export const sortInAscendingDirection = () => ({
+  type: SORT_IN_ASCENDING_DIRECTION,
+});
+
+export const sortInDescendingDirection = () => ({
+  type: SORT_IN_DESCENDING_DIRECTION,
 });
