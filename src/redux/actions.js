@@ -3,9 +3,8 @@ import {
   EDIT_TASK,
   DELETE_TASK,
   TOGGLE_DONE_TASK,
-  FILTER_BY_EMAIL,
-  FILTER_BY_NAME,
-  FILTER_BY_STATUS,
+  SHOW_FORM,
+  FILTER_BY_FIELD,
   SORT_IN_ASCENDING_DIRECTION,
   SORT_IN_DESCENDING_DIRECTION,
 } from "./actionTypes";
@@ -37,16 +36,13 @@ export const editTask = (id, content) => ({
   },
 });
 
-export const filterByName = () => ({
-  type: FILTER_BY_NAME,
+export const showForm = () => ({
+  type: SHOW_FORM,
 });
 
-export const filterByEmail = () => ({
-  type: FILTER_BY_EMAIL,
-});
-
-export const filterByStatus = () => ({
-  type: FILTER_BY_STATUS,
+export const filterByField = (field) => ({
+  type: FILTER_BY_FIELD,
+  payload: field,
 });
 
 export const sortInAscendingDirection = () => ({

@@ -1,8 +1,4 @@
-import {
-  FILTER_BY_EMAIL,
-  FILTER_BY_NAME,
-  FILTER_BY_STATUS,
-} from "../../actionTypes";
+import { FILTER_BY_FIELD } from "../../actionTypes";
 
 const initialState = {
   field: "none",
@@ -10,22 +6,10 @@ const initialState = {
 
 export const filterReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FILTER_BY_NAME: {
+    case FILTER_BY_FIELD: {
       return {
         ...state,
-        field: "email",
-      };
-    }
-    case FILTER_BY_EMAIL: {
-      return {
-        ...state,
-        field: "username",
-      };
-    }
-    case FILTER_BY_STATUS: {
-      return {
-        ...state,
-        field: "status",
+        field: action.payload,
       };
     }
     default:

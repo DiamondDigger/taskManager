@@ -1,4 +1,3 @@
-import { TableSortLabel } from "@material-ui/core";
 import {
   ADD_TASK,
   EDIT_TASK,
@@ -20,6 +19,12 @@ const initialState = [
     completed: false,
   },
 ];
+
+export async function fetchTasks(dispatch, getState) {
+  dispatch({ type: "LOAD_TASKS" });
+  const response = await fetch("http://localhost:3002/view1");
+  dispatch({ type: "SET_LOADED_TASKS", payload: response });
+}
 
 export const tasksReducer = (state = initialState, action) => {
   switch (action.type) {
